@@ -1,0 +1,23 @@
+
+
+p{
+    background-color: aquamarine;
+    border: 6px;
+
+    border-style: solid;
+    width: fit-content;
+    padding: 40px;
+    margin: 20px;
+}
+
+h1{
+
+    background-color: brown;
+    border: 10px;
+    text-align: center;
+
+    border-style:initial;
+    margin: auto;
+
+
+}
