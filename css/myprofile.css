@@ -1,16 +1,43 @@
+
+
+
+
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 
 }
 
+
+html{
+
+    border: 20px solid green;
+}
+
+
+
+
 header{
+    border: 2px dashed black;
+    
     text-align: center;
     font-size: medium;
 
 
+
+
 }
 
-image{
+.small-profile-img{
+    border: 3px;
+    border-radius: 67%;
     
+}
+
+.About-us-colum-2{
+
+    width: 40%;
+
+
+
 }
