@@ -34,10 +34,39 @@ header{
     
 }
 
-.About-us-colum-2{
+.about-me-column-2{
 
     width: 40%;
 
+    /*make all the elements inside a container */
+    float: left;
+    height: 600px;
+    border: 2px dashed black;
+    border-radius: 3%;
+    /*create an space between the elements */
 
+    margin:  10px;
+
+    /*create an space between an element and its border */
+    padding: 15px;
+
+
+
+}
+
+/* it is used to select a children of a part element */
+
+section>h1{
+    background-color: beige;
+
+    text-align: center;
+}
+#about-me-column-21{
+
+    background-color: blanchedalmond;
+}
+#about-me-column-22{
+    background: url(../html/images.jpg);
+    background-size: cover;
 
 }
