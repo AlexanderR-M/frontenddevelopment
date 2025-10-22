@@ -94,3 +94,48 @@ section{
 
 }
 
+footer{
+    clear:both;
+    
+}
+.footer-icon-style{
+
+    width: 30px;
+    height: 30px;
+}
+.experience-tanle-style {
+    border-spacing: 90px;
+}
+
+.table, tr, td{
+    border: 1px solid powderblue;
+
+}
+#experience-section>table> tr, td {
+    padding: 40px;
+    border: 2px solid powderblue;
+}
+/* :nth-child(odd) is used to select all odd children elements of a type*/
+/* :nth-child(even) is used to select all odd children elements of a type*/
+
+tr:nth-child(odd){
+    background-color: aqua;
+}
+
+.footer-content-left{
+    float: left;
+}
+
+.footer-content-right{
+    float: right;
+    font-size: 40px;
+}
+
+a{
+    padding: 20px;
+    transition: all 1s linear;
+}
+
+a:hover{
+    font-size: 50px;
+}
