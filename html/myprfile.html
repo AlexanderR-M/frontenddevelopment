@@ -8,16 +8,29 @@
     <link rel="stylesheet" href="../css/myprofile.css">
     <title>Document</title>
 
+    <meta name="description" content="Portfolio de Alexander Romano, estudiante de informática en Madrid. Conoce mis proyectos en HTML, CSS, Java, SQL y más.">
+    <meta name="keywords" content="Alexander Romano, informática, programación, HTML, CSS, Java, SQL, proyectos">
+    <meta name="author" content="Alexander Romano">
+
+
 </head>
 
 <body>
     <header>
 
-        <img src="vsphoto.jpg" alt="">
+        <img src="vsphoto.jpg" alt="Retrato de Alexander Romano" loading="lazy" onerror="this.src='default-profile.jpg';">
         <h1>Presentation</h1>
         <h2>Alexander Romano</h2>
 
     </header>
+    <nav>
+        <a href="#about-me">Sobre mí</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+
+
+    
     <main>
         <section>
             <!--There are line elements and block elements in HTML, each block
@@ -46,9 +59,9 @@
 
 
             </div>
-            <div class="about-me-column-2" id="about-me-column-22">
+            <div class="about-me-column-3" id="about-me-column-22">
 
-                <!--<img class="About-us-colum-2" src="aston.jpg" alt=""> -->
+                <img class="About-us-colum-2" src="vsphoto.jpg" alt=""> 
             </div>
 
         </section>
@@ -153,28 +166,49 @@
     </main>
 
 
+    
+
     <footer>
-        <div  class="footer-left">
-            <a href="https://github.com/AlexanderR-M" >
-                <img src="github-svgrepo-com.svg" alt="" class="footer-icon-style">
+        <div class="footer-left">
+            <a href="https://github.com/AlexanderR-M" aria-label="Perfil de GitHub">
+                <img src="github-svgrepo-com.svg" alt="Icono de GitHub" class="footer-icon-style">
             </a>
-            <a href=""><img src="" alt=""></a>
+            <a href="https://linkedin.com/in/alexander-romano" aria-label="Perfil de LinkedIn">
+                <img src="linkedin-svgrepo-com.svg" alt="Icono de LinkedIn" class="footer-icon-style">
+            </a>
         </div>
+
+        <div class="footer-center">
+            <a href="/">Inicio</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#contact">Contacto</a>
+        </div>
+
         <div class="footer-right">
-            <a href="">
-                <img src="ebay-svgrepo-com.svg" alt="" class="footer-icon-style">
+            <a href="#">
+                <img src="ebay-svgrepo-com.svg" alt="Icono de eBay" class="footer-icon-style">
             </a>
         </div>
-        <div class="footer-content-right">
-            <a href="/">Home</a>
-            <!--point to a page in the same application-->
-            <a href="vsphoto.jpg">Photo</a>
-            <!--jump to a specific part of the same page using id-->
-            <a href="#projects-section">My rpojects</a>
-
-        </div>
-
     </footer>
+
+
+   <section id="contact">
+    <h1>Contacto</h1>
+    <form action="mailto:alexander@example.com" method="post" enctype="text/plain">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+
 </body>
 
 </html>
