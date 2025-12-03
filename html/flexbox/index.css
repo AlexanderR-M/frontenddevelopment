@@ -1,0 +1,27 @@
+*{
+    font-family: monospace;
+    font-size: large;
+}
+
+.logo{
+    max-width: 10vw;
+    min-width: 3vw;
+}
+
+nav>ul{
+    border: 2px solid black;
+    list-style: none;
+    /* "display" is a property used to organize a gorup of elements 
+    flex is a one dimensional display style, which
+    distribute the leements inside the flex container along the main exists*/
+    display: flex;
+    /*choose the main axis direcction along which the flex items are positioned*/
+    flex-direction: row;
+    /* choose the way to distribute the flex items along the main axis*/
+    justify-content: center;
+}
+
+
+nav>ul>a{
+    margin: 4vw;
+}
