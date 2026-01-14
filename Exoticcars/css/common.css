@@ -18,10 +18,12 @@ nav>ul{
     /*choose the main axis direcction along which the flex items are positioned*/
     flex-direction: row;
     /* choose the way to distribute the flex items along the main axis*/
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 
 nav>ul>a{
     margin: 4vw;
+    width: 40vw;
 }
+
