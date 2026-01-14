@@ -7,7 +7,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(135deg, #1d2671, #c33764);
+    background: linear-gradient(135deg, #711d71, #37c35a);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ body {
 .login-container button {
     width: 100%;
     padding: 10px;
-    background-color: #1d2671;
+    background-color: #1aa77c;
     color: white;
     border: none;
     border-radius: 5px;
@@ -59,7 +59,7 @@ body {
 
 /* Extra: cambio de color al pasar el mouse */
 .login-container button:hover {
-    background-color: #c33764;
+    background-color: #37c34a;
 }
 
 /* Enlace */
