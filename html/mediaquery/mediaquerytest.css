@@ -1,0 +1,27 @@
+*{
+    background-color: blueviolet;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*we use media query the parameters related with this*/
+/*the following media query means that if the width of the screen is less than Xpx, new background and font will be aplied*/
+
+@media screen and (width < 200px){
+    *{
+        background-color: blue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+@media screen and (width < 600px){
+    *{
+        background-color: rgb(187, 255, 0);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+
+@media screen and (width < 800px){
+    *{
+        background-color: rgb(255, 136, 0);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
