@@ -1,12 +1,10 @@
 /* ============================= */
 /* RESET GENERAL                 */
-/* Elimina márgenes y paddings   */
-/* por defecto del navegador     */
 /* ============================= */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Evita que el padding rompa el ancho */
+  box-sizing: border-box;
 }
 
 /* Tamaño base para usar rem */
@@ -17,137 +15,138 @@ html {
 /* Estilos generales del sitio */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden; /* Evita scroll horizontal */
+  overflow-x: hidden;
   background-color: #ffffff;
 }
 
-/* ============================= */
-/* GRID GENERAL DEL SITIO        */
-/* ============================= */
+/* ================================================= */
+/* =============== CSS GRID ========================= */
+/* ESTRUCTURA GENERAL DEL SITIO                      */
+/* ================================================= */
 
-/* Contenedor principal que usa CSS Grid */
+/* Contenedor principal → GRID */
 .layout {
-  display: grid;
+  display: grid; /* GRID */
   grid-template-areas:
     "header"
     "main"
     "aside"
     "footer";
-  grid-template-columns: 1fr; /* Una sola columna en mobile */
-  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  grid-template-columns: 1fr;
+  min-height: 100vh;
 }
 
-/* HEADER */
+/* Áreas del GRID */
 header {
-  grid-area: header;
+  grid-area: header; /* GRID */
   background-color: #0a0a0a;
   color: #ffffff;
-  padding: 1rem; /* rem para escalabilidad */
+  padding: 1rem;
 }
 
-/* MAIN */
 main {
-  grid-area: main;
+  grid-area: main; /* GRID */
   padding: 2rem;
 }
 
-/* ASIDE */
 aside {
-  grid-area: aside;
+  grid-area: aside; /* GRID */
   background-color: #f2f2f2;
   padding: 2rem;
 }
 
-/* FOOTER */
 footer {
-  grid-area: footer;
+  grid-area: footer; /* GRID */
   background-color: #0a0a0a;
   color: #ffffff;
   text-align: center;
   padding: 1rem;
 }
 
-/* ============================= */
-/* FLEXBOX - NAVEGACIÓN          */
-/* ============================= */
+/* ================================================= */
+/* =============== FLEXBOX ========================== */
+/* NAVEGACIÓN                                       */
+/* ================================================= */
 
-/* Contenedor del menú */
 .nav {
-  display: flex; /* Activa Flexbox */
-  justify-content: space-between; /* Logo a la izquierda, menú a la derecha */
-  align-items: center; /* Alineación vertical */
+  display: flex; /* FLEXBOX */
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Título / logo */
 .nav h1 {
   font-size: 1.75rem;
 }
 
-/* Lista del menú */
 .nav ul {
-  display: flex; /* Flexbox para los links */
-  list-style: none; /* Quita viñetas */
-  gap: 1rem; /* Espacio entre enlaces */
+  display: flex; /* FLEXBOX */
+  list-style: none;
+  gap: 1rem;
 }
 
-/* Enlaces del menú */
 .nav a {
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
 }
 
-/* ============================= */
-/* HERO SECTION (vh / vw)        */
-/* ============================= */
+/* ================================================= */
+/* =============== FLEXBOX ========================== */
+/* HERO SECTION                                     */
+/* ================================================= */
 
-/* Sección principal visual */
 .hero {
-  height: 45vh; /* Altura relativa a la pantalla */
+  height: 45vh;
   background: linear-gradient(135deg, #1c69d4, #000000);
   color: #ffffff;
-  display: flex; /* Centra el texto */
+  display: flex; /* FLEXBOX */
   align-items: center;
   justify-content: center;
-  font-size: 2.5rem; /* rem */
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
   padding: 1rem;
 }
 
-/* ============================= */
-/* FLEXBOX - TARJETAS            */
-/* ============================= */
+/* ================================================= */
+/* =============== FLEXBOX ========================== */
+/* TARJETAS                                         */
+/* ================================================= */
 
-/* Contenedor de tarjetas */
 .cards {
-  display: flex;
-  flex-wrap: wrap; /* Permite que bajen de línea */
+  display: flex; /* FLEXBOX */
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* Tarjeta individual */
 .card {
-  flex: 1 1 250px; /* Responsive automático */
+  flex: 1 1 250px; /* FLEXBOX */
   background-color: #e6e6e6;
   padding: 1.5rem;
   border-radius: 10px;
 }
 
-/* Título de la tarjeta */
+/* Imagen dentro de la tarjeta */
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
-/* Texto de la tarjeta */
 .card p {
   font-size: 1rem;
 }
 
-/* ============================= */
-/* ASIDE                         */
-/* ============================= */
+/* ================================================= */
+/* =============== ASIDE ============================ */
+/* ================================================= */
 
 aside h2 {
   font-size: 1.5rem;
@@ -158,17 +157,16 @@ aside p {
   font-size: 1rem;
 }
 
-/* ============================= */
-/* RESPONSIVE - TABLET / DESKTOP */
-/* ============================= */
+/* ================================================= */
+/* =============== GRID RESPONSIVE ================== */
+/* ================================================= */
 
 @media (min-width: 768px) {
-  /* Cambia la estructura del Grid */
   .layout {
     grid-template-areas:
       "header header"
       "main aside"
       "footer footer";
-    grid-template-columns: 3fr 1fr; /* Main más ancho que aside */
+    grid-template-columns: 3fr 1fr;
   }
 }
