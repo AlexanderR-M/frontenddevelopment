@@ -21,6 +21,16 @@ console.log(timerDisplayer);
  * that we want to respond to the event
  * the first parameter 
  */
+let fontSize = 4;
 start.addEventListener("click", ()=>{
     console.debug("jajajaja");
+    start.style.fontSize = fontSize + "px";
 });
+// annonymus function 
+stop.addEventListener("click", ()=>{
+    console.debug("jajajaja");
+});
+function resetBtnHandeler(){
+    console.debug("wowowow")
+};
+reset.addEventListener("click", resetBtnHandeler);
