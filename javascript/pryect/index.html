@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../pryect/index.css">
+</head>
+<h1 id="titulo">Mira como se cambia</h1>
+<!-- Título de la página. Tiene el id "titulo" para que JavaScript pueda encontrarlo usando el DOM -->
+
+<button onclick="cambiar()">Change Text</button>
+<!-- Botón. Cuando el usuario hace clic se ejecuta la función cambiar() -->
+
+<script>
+    // Aquí empieza el código JavaScript
+
+    function cambiar() {
+        // Función que se ejecuta cuando se pulsa el botón
+
+        document.getElementById("titulo").textContent = "Hola Manolo";
+        // Busca el elemento con id "titulo" en el DOM y cambia su texto
+
+    }
+
+</script> <!-- Aquí termina el código JavaScript -->
+
+</html>
