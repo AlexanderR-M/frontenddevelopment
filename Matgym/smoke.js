@@ -15,19 +15,29 @@ ctx.arc(2, 3, 10, 0, Math.PI * 2);
 ctx.fill();
 
 
-class Smoke{
-    constructor(){
+class Smoke {
+    constructor() {
 
         this.partcles = [];
     }
 
-    add(particle){
+    add(particle) {
         this.partcles.push(particle)
     }
 
+    animate() {
+        for (let index = 0; index < this.partcles.length; index++) {
+            this.partcles[index].update();
+            this.partcles[index].draw();
+
+        }
+
+        requestAnimationFrame(animate);
+    }
+
 }
-class Particle{
-    constructor(){
+class Particle {
+    constructor() {
         this.size = Math.random() * 2 + MIN_PARTICLE_SIZE
         this.color = 'rgb(196, 200, 232)';
         this.speedX = Math.random() * 2 + MIN_SPEED_X;
@@ -35,10 +45,28 @@ class Particle{
         this.x = x;
         this.y = y;
     }
+
+    update() {
+        this.size -= 1;
+        //this.size = this.size
+
+        this.draw();
+    }
+    draw() {
+        ctx.fillStyle = 'rgb(34,56,78)'
+        //prepare to draw a path
+        ctx.beginPath();
+        //draw a circle with the arc method
+        ctx.arc(2, 3, 10, 0, Math.PI * 2);
+        //fill the object that we have drawn
+        ctx.fill();
+
+
+    }
 }
 const smoke = new Smoke()
 console.log(Smoke)
-window.addEventListener('mousemove', (e)=>{
+window.addEventListener('mousemove', (e) => {
     console.log(e);
     console.log(e.clientX);
     console.log(e.clientY);
@@ -50,13 +78,7 @@ window.addEventListener('mousemove', (e)=>{
         console.log(smoke.partcles)
     }
 
-
-
-
-
-
-
 });
 
 
-
+smoke.animate();
