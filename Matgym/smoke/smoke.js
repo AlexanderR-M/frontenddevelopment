@@ -13,24 +13,30 @@ ctx.beginPath();
 ctx.arc(2, 3, 10, 0, Math.PI * 2);
 //fill the object that we have drawn
 ctx.fill();
+function resize(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
 
-
+window.addEventListener('resize', resize);
+window.dispatchEvent(new Event('resize'));
+resize();
 class Smoke {
     constructor() {
 
-        this.partcles = [];
+        this.particles = [];
     }
 
     add(particle) {
-        this.partcles.push(particle)
+        this.particles.push(particle)
     }
 
     animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        for (let index = 0; index < this.partcles.length; index++) {
-            this.partcles[index].update();
-            if(this.particle[index].size <= 0.2){
-                this.paticle.splice(index, 1);
+        for (let index = 0; index < this.particles.length; index++) {
+            this.particles[index].update();
+            if(this.particles[index].size <= 0.2){
+                this.particles.splice(index, 1);
                 index--;
             }
 
@@ -46,22 +52,23 @@ class Particle {
         this.color = 'rgb(196, 200, 232)';
         this.speedX = Math.random() * 2 + MIN_SPEED_X;
         this.speedY = Math.random() * 2 + MIN_SPEED_Y;
-        this.x = x;
-        this.y = y;
+        this.x = Math.random() * 2 + x;
+        this.y = Math.random() * 2 + y;
     }
 
     update() {
-        this.size -= 1;
+        this.size -= 0.1;
+        this.x += this.speedX;
         //this.size = this.size
 
         this.draw();
     }
     draw() {
-        ctx.fillStyle = 'rgb(34,56,78)'
+        ctx.fillStyle = 'rgb(255, 0, 128)'
         //prepare to draw a path
         ctx.beginPath();
         //draw a circle with the arc method
-        ctx.arc(2, 3, 10, 0, Math.PI * 2);
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         //fill the object that we have drawn
         ctx.fill();
 
@@ -79,7 +86,7 @@ window.addEventListener('mousemove', (e) => {
     for (let index = 0; index < NUM_OF_PARTICLES; index++) {
         const particle = new Particle(e.clientX, e.clientY);
         smoke.add(particle)
-        console.log(smoke.partcles)
+        console.log(smoke.particles)
     }
 
 });
